@@ -1,6 +1,4 @@
 .wapper {
-    padding: 25px;
-
     header {
         text-align: left;
     }
@@ -16,16 +14,20 @@
             margin-right: 10px;
             background-color: #ffffff;
             border-radius: 7px;
+            margin-bottom: 46px;
         }
         .details-section {
-            width: 80%;        
+            width: 79%;        
             margin-left: 10px;
             border-radius: 7px;
+            margin-bottom: 46px;
         }
     }
     footer {
         position: fixed;    
         bottom: 0;
+        background-color: #f2f2f2;
+        width: 100%;
 
         app-footer {
             text-align: center;

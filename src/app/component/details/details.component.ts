@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LaunchService } from 'src/app/services/launch.service';
 
 @Component({
   selector: 'app-details',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
 
-  constructor() { }
+  launchDetails: any = [];
 
-  ngOnInit(): void {
+  constructor(private _launchData: LaunchService) { }
+
+  ngOnInit() {
+    this.getData();
+  }
+
+  getData() {
+    this._launchData.fetchLaunchData()
+      .subscribe(
+        data => { this.launchDetails = data },
+        err => console.error(err),
+        () => console.log('done loading Data')
+      );
   }
 
 }

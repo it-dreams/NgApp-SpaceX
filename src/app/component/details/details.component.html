@@ -1,6 +1,23 @@
-<section>
-    <app-mission-detail></app-mission-detail>
-    <app-mission-detail></app-mission-detail>
-    <app-mission-detail></app-mission-detail>
-    <app-mission-detail></app-mission-detail>
-</section>
+<!-- <app-mission-detail></app-mission-detail> -->
+<div class="mission-detail">
+    <section class="mission-detail-card" *ngFor="let result of launchDetails">
+        <img [src]="result.mission_patch" alt={{result.mission_patch}}>
+        <h3>{{result.mission_name}}</h3>
+        <p>
+            <strong>Misson Ids:</strong>
+            {{result.mission_id}}
+        </p>
+        <p>
+            <strong>Launch Year:</strong>
+            {{result.launch_year}}
+        </p>
+        <p>
+            <strong>Successful Launch:</strong>
+            {{result.launch_success}}
+        </p>
+        <p>
+            <strong>Successful Landing:</strong>
+            {{result.launch_landing}}
+        </p>
+    </section>
+</div>

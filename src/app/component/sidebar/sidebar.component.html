@@ -2,24 +2,26 @@
 <div class="launch-year">
     <p>Launch Year</p>
     <div class="years">
-        <app-button></app-button>
-        <app-button></app-button>
-        <app-button></app-button>
+        <button mat-flat-button color="primary" *ngFor="let year of launchingYears">
+            {{year}}
+        </button>
     </div>
 </div>
+
 <div class="successful-launch">
     <p>Successful Launch</p>
     <div class="years">
-        <app-button></app-button>
-        <app-button></app-button>
+        <button mat-flat-button color="primary" *ngFor="let status of launchingStatus">
+            {{status}}
+        </button>
     </div>
-
 </div>
+
 <div class="successful-landing">
     <p>Successful Landing</p>
     <div class="years">
-        <app-button></app-button>
-        <app-button></app-button>
+        <button mat-flat-button color="primary" *ngFor="let status of launchingStatus">
+            {{status}}
+        </button>
     </div>
-
 </div>

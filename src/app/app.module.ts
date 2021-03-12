@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
@@ -8,8 +10,9 @@ import { SidebarComponent } from './component/sidebar/sidebar.component';
 import { DetailsComponent } from './component/details/details.component';
 import { MissionDetailComponent } from './component/core-components/mission-detail/mission-detail.component';
 import { ButtonComponent } from './component/core-components/button/button.component';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 import { MatButtonModule } from '@angular/material/button';
+import { LaunchService } from './services/launch.service';
 
 @NgModule({
   declarations: [
@@ -23,10 +26,12 @@ import { MatButtonModule } from '@angular/material/button';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    NoopAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule,
+    ScrollingModule
   ],
-  providers: [],
+  providers: [LaunchService],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

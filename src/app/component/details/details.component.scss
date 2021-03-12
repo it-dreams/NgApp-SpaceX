@@ -1,4 +1,22 @@
-section {
+.mission-detail {
     display: flex;
     flex-direction: row;    
+    flex-wrap: wrap;
+
+    .mission-detail-card {
+        background-color: #ffffff;
+        width: 185px;
+        height: auto;
+        padding: 10px;
+        border-radius: 7px;
+        margin: 0 10px 10px 10px;
+
+        img {
+            width: 100%;
+            max-width: inherit;
+            background-color: #eeeeee;
+            min-height: 100px;  
+            border: 1px solid#eeeeee;          
+        }
+    }
 }
