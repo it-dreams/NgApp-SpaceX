@@ -2,20 +2,22 @@
 <div class="mission-detail">
     <section class="mission-detail-card" *ngFor="let result of launchDetails">
         <img [src]="result.mission_patch" alt={{result.mission_patch}}>
-        <h3>{{result.mission_name}}</h3>
-        <p>
-            <strong>Misson Ids:</strong>
+        <h3 aria-label="Mission name">
+            {{result.mission_name}}
+        </h3>
+        <p aria-label="Misson Ids">
+            <strong>Mission Ids:</strong>
             {{result.mission_id}}
         </p>
-        <p>
+        <p aria-label="Launch Year">
             <strong>Launch Year:</strong>
             {{result.launch_year}}
         </p>
-        <p>
+        <p aria-label="Successful Launch">
             <strong>Successful Launch:</strong>
             {{result.launch_success}}
         </p>
-        <p>
+        <p aria-label="Successful Landing">
             <strong>Successful Landing:</strong>
             {{result.launch_landing}}
         </p>

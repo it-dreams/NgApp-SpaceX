@@ -1,26 +1,26 @@
 <h2>{{title}}</h2>
 <div class="launch-year">
-    <p>Launch Year</p>
+    <p aria-label="Launch Year">Launch Year</p>
     <div class="years">
-        <button mat-flat-button color="primary" *ngFor="let year of launchingYears">
+        <button mat-flat-button color="primary" (click)="getYearWiseData(year)" *ngFor="let year of launchingYears">
             {{year}}
         </button>
     </div>
 </div>
 
 <div class="successful-launch">
-    <p>Successful Launch</p>
+    <p aria-label="Successful Launch">Successful Launch</p>
     <div class="years">
-        <button mat-flat-button color="primary" *ngFor="let status of launchingStatus">
+        <button mat-flat-button color="primary" (click)="getLaunchingData(status)" *ngFor="let status of launchingStatus">
             {{status}}
         </button>
     </div>
 </div>
 
 <div class="successful-landing">
-    <p>Successful Landing</p>
+    <p aria-label="successful-landing">Successful Landing</p>
     <div class="years">
-        <button mat-flat-button color="primary" *ngFor="let status of launchingStatus">
+        <button mat-flat-button color="primary" (click)="getLandingData(status)" *ngFor="let status of launchingStatus">
             {{status}}
         </button>
     </div>

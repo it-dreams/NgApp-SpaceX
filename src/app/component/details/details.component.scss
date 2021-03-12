@@ -18,5 +18,14 @@
             min-height: 100px;  
             border: 1px solid#eeeeee;          
         }
+        h3 {
+            color: #454a8b;
+        }
+        p { 
+            color: #454a8b;
+            strong {
+                color: #333333;
+            }
+        }
     }
 }

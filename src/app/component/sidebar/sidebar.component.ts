@@ -13,8 +13,6 @@ export class SidebarComponent implements OnInit {
 
   launchingStatus = ['Ture', 'False'];
 
-  // launchingYears:any = [];
-
   constructor(private _launchData: LaunchService) { }
 
   ngOnInit() {
@@ -30,4 +28,15 @@ export class SidebarComponent implements OnInit {
   //     );
   // }
 
+  getYearWiseData(year) {
+    console.log('Year wise data ' + year)
+  }
+
+  getLaunchingData(status) {
+    console.log('Year Launching data ' + status)
+  }
+
+  getLandingData(status) {
+    console.log('Year Landing Data ' + status)
+  }
 }
