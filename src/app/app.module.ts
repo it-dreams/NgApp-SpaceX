@@ -8,8 +8,6 @@ import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { SidebarComponent } from './component/sidebar/sidebar.component';
 import { DetailsComponent } from './component/details/details.component';
-import { MissionDetailComponent } from './component/core-components/mission-detail/mission-detail.component';
-import { ButtonComponent } from './component/core-components/button/button.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import { LaunchService } from './services/launch.service';
@@ -20,9 +18,7 @@ import { LaunchService } from './services/launch.service';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    DetailsComponent,
-    MissionDetailComponent,
-    ButtonComponent
+    DetailsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
