@@ -31,7 +31,7 @@ export class DetailsComponent implements OnInit {
       .subscribe(
         item => {
           console.log('Hello', item);
-          this.launchDetails = item
+          // this.launchDetails = item
         }
       )
   }
