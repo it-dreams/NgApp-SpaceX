@@ -14,6 +14,7 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit() {
     this.getData();
+    this.getFilterData();
   }
 
   getData() {
@@ -23,6 +24,16 @@ export class DetailsComponent implements OnInit {
         err => console.error(err),
         () => console.log('done loading Data')
       );
+  }
+
+  getFilterData() {
+    this._launchData.launchRocketData$
+      .subscribe(
+        item => {
+          console.log('Hello', item);
+          this.launchDetails = item
+        }
+      )
   }
 
 }

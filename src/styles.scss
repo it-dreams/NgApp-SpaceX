@@ -20,7 +20,7 @@ body {
 // Media Query
 
 // Mobile devices
-@media only screen and (max-width: 700px) {
+@media (max-width: 700px) {
     .main-container {           
         flex-direction: column !important;     
 
@@ -71,6 +71,10 @@ body {
 }
 
 // Desktop Devices
-@media (min-width: 701px) and (max-width: 1024px){ 
-
+@media (min-width: 1024px) and (max-width: 1440px){ 
+    .wapper {
+        max-width: 1440px !important;
+        margin: auto !important;
+        width: 100% !important;
+    }
 }

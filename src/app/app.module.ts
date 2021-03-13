@@ -11,6 +11,7 @@ import { DetailsComponent } from './component/details/details.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import { LaunchService } from './services/launch.service';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LaunchService } from './services/launch.service';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    DetailsComponent
+    DetailsComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
