@@ -1,25 +1,25 @@
 <!-- <app-mission-detail></app-mission-detail> -->
 <div class="mission-detail">
-    <section class="mission-detail-card" *ngFor="let result of launchDetails">
-        <img [src]="result.mission_patch" alt={{result.mission_patch}}>
+    <section class="mission-detail-card" *ngFor="let result of launchDetails; index as i; first as isFirst;">
+        <img [src]="result.links.mission_patch" alt={{result.mission_name}}>
         <h3 aria-label="Mission name">
-            {{result.mission_name}}
+            {{result.mission_name}} #{{i+1}}
         </h3>
         <p aria-label="Misson Ids">
             <strong>Mission Ids:</strong>
-            {{result.mission_id}}
+            {{result.mission_id || 'NA'}}
         </p>
         <p aria-label="Launch Year">
             <strong>Launch Year:</strong>
-            {{result.launch_year}}
+            {{result.launch_year || 'NA'}}
         </p>
         <p aria-label="Successful Launch">
             <strong>Successful Launch:</strong>
-            {{result.launch_success}}
+            {{result.launch_success || 'NA'}}
         </p>
         <p aria-label="Successful Landing">
             <strong>Successful Landing:</strong>
-            {{result.rocket.first_stage.cores[0].land_success}}
+            {{result.rocket.first_stage.cores[0].land_success || 'NA'}}
         </p>
     </section>
 </div>

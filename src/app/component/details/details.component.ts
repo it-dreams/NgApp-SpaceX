@@ -54,8 +54,7 @@ export class DetailsComponent implements OnInit {
           if (this.landSuccess) {
             launchString += `&land_success=${this.landSuccess}`;
           }
-          console.log(launchString);
-
+          
           this.getData(launchString);
         }
       )

@@ -22,28 +22,7 @@ export class LaunchService {
         return this.http.get(this.basUrl + (queryString || ''));
     }
 
-    // fetchYearWiseData(year) {
-    //     return this.http.get(`${this.basUrl + this.yearWiseData}/${year}`)
-    // }
-
-    // getContact(contactId) {
-    //     return this.http.get(`${this.API_URL + this.yearWiseData}/${year}`)
-    // }
-
-
-    // fetchLaunchingData() {
-    //     return this.http.get(this.basUrl + this.launchSuccess);
-    // }
-
-    // fetchLandingData() {
-    //     return this.http.get(this.basUrl + this.landSuccess);
-    // }
-
     sendData(data: FilterLaunchData) {
         this._rocketLaunchData.next(data);
     }
-
-    // clear() {
-    //     this.launchData = [];
-    // }
 }
