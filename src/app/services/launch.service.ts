@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
+import { FilterLaunchData } from '../component/sidebar/sidebar.component';
 
 @Injectable({
     providedIn: 'root',
@@ -8,19 +9,17 @@ import { Observable, Subject } from 'rxjs';
 export class LaunchService {
 
     basUrl = 'https://api.spaceXdata.com/v3/launches?limit=100';
-    yearWiseData = '&launch_success=true&land_success=true&launch_year=';
-    launchSuccess = '&launch_success=';
-    landSuccess = '&launch_success=true&land_success=';
+    yearWiseData = '&launch_success={{launchingStatus}}&land_success={{landingStatus}}&launch_year={{year}}';
 
     launchData: string[] = [];
 
-    private _rocketLaunchData = new Subject<String>();
+    private _rocketLaunchData = new Subject<FilterLaunchData>();
     launchRocketData$ = this._rocketLaunchData.asObservable();
 
     constructor(private http: HttpClient) { }
 
-    fetchLaunchData() {
-        return this.http.get(this.basUrl);
+    fetchLaunchData(queryString?: string) {
+        return this.http.get(this.basUrl + (queryString || ''));
     }
 
     // fetchYearWiseData(year) {
@@ -40,7 +39,7 @@ export class LaunchService {
     //     return this.http.get(this.basUrl + this.landSuccess);
     // }
 
-    sendData(data: string) {
+    sendData(data: FilterLaunchData) {
         this._rocketLaunchData.next(data);
     }
 

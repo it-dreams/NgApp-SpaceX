@@ -49,16 +49,24 @@ export class SidebarComponent implements OnInit {
   // }
 
 
-  getYearWiseData(year) {
-    this._launchData.sendData(year);
+  getFilterData(filter, value) {
+    const filterVal = {} as FilterLaunchData;
+    filterVal.filter = filter;
+    filterVal.value = value;
+    this._launchData.sendData(filterVal);
   }
 
-  getLaunchingData(status) {
-    this._launchData.sendData(status);
-  }
+  // getLaunchingData(status) {
+  //   this._launchData.sendData(status);
+  // }
 
-  getLandingData(status) {
-    this._launchData.sendData(status);
-  }
+  // getLandingData(status) {
+  //   this._launchData.sendData(status);
+  // }
 
+}
+
+export interface FilterLaunchData {
+  filter: string,
+  value: string
 }
