@@ -1,0 +1,83 @@
+@import './colors.scss';
+@import './fonts.scss';
+
+
+// Media Query
+
+// Mobile devices
+@media (max-width: 700px) {
+    .wapper {
+        margin-right: unset;    
+        .main-container {           
+            flex-direction: column !important;
+            .Launch-section {
+                max-width: 100% !important;
+                position: unset !important;
+                margin-bottom: 20px !important;
+
+                .launch-year, .successful-launch, .successful-landing {
+                    .years {
+                        button {
+                            padding: 8px 20px;
+                        }
+                    }
+                }
+            }
+            .details-section {
+                width: 100% !important;
+                margin: unset !important;
+                .mission-detail {
+                    flex-direction: column !important; 
+                    .mission-detail-card {
+                        margin: 20px 0;
+                        width: 94%;
+                        padding: 3%;
+
+                    }
+                }
+            }
+        }
+        footer {
+            width: 100% !important;       
+        }
+    }
+}
+
+// Tablet Devices
+@media (min-width: 701px) and (max-width: 1024px){ 
+    .main-container {    
+        .Launch-section {
+            max-width: 30% !important;
+            .launch-year, .successful-launch, .successful-landing {
+                .years {
+                    button {
+                        padding: 8px 20px;
+                    }
+                }
+            }
+        }
+        .details-section {
+            width: 70% !important;
+            .mission-detail {
+                .mission-detail-card {
+                    width: 170px;
+                    // max-width: 185px;
+                    padding: 3%;
+                }
+            }
+        }
+    }
+    
+    footer {
+        width: 100% !important;       
+    }
+}
+
+// Desktop Devices
+@media (min-width: 1024px) and (max-width: 1440px){ 
+    .wapper {
+        max-width: 1440px !important;
+        margin: auto !important;
+        width: 100% !important;
+    }
+}
