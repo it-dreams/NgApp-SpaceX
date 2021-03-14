@@ -12,9 +12,31 @@ NgAppSpaceX app uses a number of open source projects to work properly:
 * SEO Friendly 
 * Fully responsive
 
-## Importants commands
+## Important commands
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Installation
+Clone down this repository. You will need node and npm installed globally on your machine.
+
+Install the dependencies and devDependencies.
+
+`npm install`
+
+### Start application
+
+`ng serve | npm start`
+
+Run app with Server side Rendering
+
+`npm run serve:ssr`
+
+
+### Build Application
+
+`ng build | npm run build`
+
+build with Server side Rendering
+
+`npm run build:ssr`
 
 ## Code scaffolding
 
