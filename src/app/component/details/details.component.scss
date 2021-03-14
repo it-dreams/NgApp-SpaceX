@@ -1,38 +1,43 @@
-.mission-detail {
-    display: flex;
-    flex-direction: row;    
-    flex-wrap: wrap;
-
-    .mission-detail-card {
-        background-color: #ffffff;
-        width: 185px;
-        height: auto;
-        padding: 10px;
-        border-radius: 7px;
-        margin: 0 10px 20px 10px;
-        word-break: break-all;
-
-        img {
-            width: 100%;
-            max-width: inherit;
-            background-color: #eeeeee;
-            min-height: 100px;  
-            border: 1px solid#eeeeee;          
-        }
-        h3 {
-            color: #454a8b;
-        }
-        p { 
-            color: #454a8b;
-            strong {
-                color: #333333;
-            }
-        }
-    }
-
-    .no-record-found {
+.mission-detail-container {
+    height: 100%;
+    .mission-detail {
         display: flex;
-        justify-content: center;
+        flex-direction: row;    
+        flex-wrap: wrap;
+
+        .mission-detail-card {
+            background-color: #ffffff;
+            width: 187px;
+            height: auto;
+            padding: 10px;
+            border-radius: 7px;
+            margin: 0 10px 20px 10px;
+            word-break: break-all;
+            flex: 1 0 auto;
+
+            img {
+                width: 100%;
+                max-width: inherit;
+                min-height: 100px;  
+                max-height: 280px;
+                background-color: #eeeeee;
+                border: 1px solid#eeeeee;          
+            }
+            h3 {
+                color: #454a8b;
+            }
+            p { 
+                color: #454a8b;
+                strong {
+                    color: #333333;
+                }
+            }
+        }        
+    }
+    .no-record-found {
+        display: flex !important;
+        justify-content: center !important;
         align-items: center;
+        height: inherit;
     }
 }

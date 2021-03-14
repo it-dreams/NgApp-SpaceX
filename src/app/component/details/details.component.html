@@ -1,27 +1,32 @@
-<div class="mission-detail">
-    <section class="mission-detail-card" *ngFor="let result of launchDetails; index as i; first as isFirst;">
-        <img [src]="result.links.mission_patch" alt={{result.mission_name}}>
-        <h3 aria-label="Mission name">
-            {{result.mission_name}} #{{i+1}}
-        </h3>
-        <p aria-label="Mission Ids">
-            <strong>Mission Ids:</strong>
-            {{result.mission_id || 'NA'}}
-        </p>
-        <p aria-label="Launch Year">
-            <strong>Launch Year:</strong>
-            {{result.launch_year || 'NA'}}
-        </p>
-        <p aria-label="Successful Launch">
-            <strong>Successful Launch:</strong>
-            {{result.launch_success || 'NA'}}
-        </p>
-        <p aria-label="Successful Landing">
-            <strong>Successful Landing:</strong>
-            {{result.rocket.first_stage.cores[0].land_success || 'NA'}}
-        </p>
-    </section>
-</div>
-<div class="mission-detail no-record-found" [hidden]="launchDetails">
-    <h2>No Record found!</h2>
+<div class="mission-detail-container">
+    <div class="mission-detail">
+        <section class="mission-detail-card" *ngFor="let result of launchDetails; index as i;">
+            <img [src]="result.links.mission_patch" alt={{result.mission_name}}>
+            <h3 aria-label="Mission name">
+                {{result.mission_name}} #{{i+1}}
+            </h3>
+            <p aria-label="Mission Ids">
+                <strong>Mission Ids:</strong>
+                <!-- {{result.mission_id || 'NA'}} -->
+            </p>
+            <ul *ngFor="let id of result.mission_id;">
+                <li>{{(id.length >= 0) ? id : 'NA' }}</li>
+            </ul>
+            <p aria-label="Launch Year">
+                <strong>Launch Year:</strong>
+                {{result.launch_year || 'NA'}}
+            </p>
+            <p aria-label="Successful Launch">
+                <strong>Successful Launch:</strong>
+                {{result.launch_success || 'NA'}}
+            </p>
+            <p aria-label="Successful Landing">
+                <strong>Successful Landing:</strong>
+                {{result.rocket.first_stage.cores[0].land_success || 'NA'}}
+            </p>
+        </section>
+    </div>
+    <div class="no-record-found" *ngIf="launchDetails.length === 0">
+        <h2>No Record found!</h2>
+    </div>
 </div>

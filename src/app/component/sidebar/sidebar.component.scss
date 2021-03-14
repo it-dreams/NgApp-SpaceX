@@ -19,13 +19,20 @@
 
         button {
             background: #c5e09b !important;
+            color: #000000;
             border: none;
             padding: 8px 30px;
             border-radius: 5px;
             line-height: 1;
             flex: 0 1 38%;
             margin: 5px 0;
-            cursor: pointer;
+            cursor: pointer;    
+            border: 1px solid#333;     
+
+            &:active, &:focus, &::selection, &:active {
+                background: #8acc21 !important;       
+            }   
         }
+        
     }
 }
