@@ -4,7 +4,7 @@ SpaceX is launch program application. It's have data all data from 2006 to curre
 
 [Click Here](https://spacex-launching-program-2021.herokuapp.com/)
 
-![alt text](https://github.com/it-dreams/NgApp-SpaceX/blob/master/src/assets/spacex-launching-program.PNG)
+![alt text](https://github.com/it-dreams/NgApp-SpaceX/blob/master/src/assets/img/spacex-launching-program.PNG)
 
 ## Technologies & 
 
@@ -44,7 +44,12 @@ build with Server side Rendering
 `$ npm run build:ssr`
 
 
-## Running unit tests
+## Roadmap
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* Write unit tests
+
+
+## Lighthouse Score
+
+![alt text](https://github.com/it-dreams/NgApp-SpaceX/blob/master/src/assets/img/performance.PNG)
 
