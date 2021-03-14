@@ -5,13 +5,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Tech
 SpaceX schedule app uses a number of open source projects to work properly:
 
-. React
-. Next JS - For server side rendering
-. React Lazyload - For lazyloading rocket list
-. CSS Modules
-. ESLint
-. Airbnb ESLint
-. SpaceX API
+* React
+* Next JS - For server side rendering
+* React Lazyload - For lazyloading rocket list
+* CSS Modules
+* ESLint
+* Airbnb ESLint
+* SpaceX API
 
 ## Development server
 
