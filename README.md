@@ -2,18 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
 
-## Tech
-SpaceX schedule app uses a number of open source projects to work properly:
+## Technologies 
+NgAppSpaceX app uses a number of open source projects to work properly:
 
-* React
-* Next JS - For server side rendering
-* React Lazyload - For lazyloading rocket list
-* CSS Modules
-* ESLint
-* Airbnb ESLint
-* SpaceX API
+* Angular 9
+* Angular Universal (Server Side Rendering)
+* SCSS (using variables)
+* Accessibility implementation 
+* SEO Friendly 
+* Fully responsive
 
-## Development server
+## Importants commands
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
