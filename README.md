@@ -6,14 +6,16 @@ SpaceX is launch program application. It's have data all data from 2006 to curre
 
 ![alt text](https://github.com/it-dreams/NgApp-SpaceX/blob/master/src/assets/spacex-launching-program.PNG)
 
-## Technologies 
+## Technologies & 
 
 * Angular 9
+* Node (v14.15.1)
+* npm (6.14.8)
 * Angular Universal (Server Side Rendering)
 * SCSS (using variables)
+* Media Query
 * Accessibility implementation 
 * SEO Friendly 
-* Fully responsive
 
 ## Important commands
 
