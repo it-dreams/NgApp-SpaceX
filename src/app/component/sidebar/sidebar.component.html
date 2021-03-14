@@ -1,8 +1,11 @@
 <h2>{{title}}</h2>
 <div class="launch-year">
     <p aria-label="Launch Year">Launch Year</p>
+    <button mat-flat-button class="reset-btn" *ngIf="year"
+        (click)="getFilterData('launchYear', null)"> Reset </button>
     <div class="years">
-        <button mat-flat-button color="primary" (click)="getFilterData('launchYear', year)" *ngFor="let year of launchingYears">
+        <button mat-flat-button (click)="getFilterData('launchYear', year)"
+            *ngFor="let year of launchingYears">
             {{year}}
         </button>
     </div>
@@ -10,8 +13,10 @@
 
 <div class="successful-launch">
     <p aria-label="Successful Launch">Successful Launch</p>
+    <button mat-flat-button class="reset-btn" *ngIf="launchSuccess"
+        (click)="getFilterData('launchStatus', null)"> Reset </button>
     <div class="years">
-        <button mat-flat-button color="primary" (click)="getFilterData('launchStatus', status)"
+        <button mat-flat-button (click)="getFilterData('launchStatus', status)"
             *ngFor="let status of launchingStatus">
             {{status}}
         </button>
@@ -20,8 +25,10 @@
 
 <div class="successful-landing">
     <p aria-label="successful-landing">Successful Landing</p>
+    <button mat-flat-button class="reset-btn" *ngIf="landSuccess"
+        (click)="getFilterData('landStatus', null)"> Reset </button>
     <div class="years">
-        <button mat-flat-button color="primary" (click)="getFilterData('landStatus', status)"
+        <button mat-flat-button (click)="getFilterData('landStatus', status)"
             *ngFor="let status of launchingStatus">
             {{status}}
         </button>

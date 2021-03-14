@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { LaunchService } from 'src/app/services/launch.service';
-import { FilterLaunchData } from '../sidebar/sidebar.component';
 
 @Component({
   selector: 'app-details',
@@ -14,6 +13,7 @@ export class DetailsComponent implements OnInit {
   year;
   launchSuccess;
   landSuccess;
+  public loading = false;
 
   constructor(private _launchData: LaunchService) { }
 
@@ -23,9 +23,13 @@ export class DetailsComponent implements OnInit {
   }
 
   getData(queryString?: string) {
+    this.loading = true;
     this._launchData.fetchLaunchData(queryString)
       .subscribe(
-        data => { this.launchDetails = data },
+        data => {
+          this.launchDetails = data
+          this.loading = false;
+        },
         err => console.error(err),
         () => console.log('done loading Data')
       );
@@ -34,28 +38,7 @@ export class DetailsComponent implements OnInit {
   getFilterData() {
     this._launchData.launchRocketData$
       .subscribe(
-        (item: FilterLaunchData) => {
-          let launchString = '';
-          if (item.filter === 'launchYear') {
-            this.year = item.value
-          }
-          if (item.filter === 'launchStatus') {
-            this.launchSuccess = item.value
-          }
-          if (item.filter === 'landStatus') {
-            this.landSuccess = item.value
-          }
-
-          if (this.year) {
-            launchString += `&launch_year=${this.year}`;
-          }
-          if (this.launchSuccess) {
-            launchString += `&launch_success=${this.launchSuccess}`;
-          }
-          if (this.landSuccess) {
-            launchString += `&land_success=${this.landSuccess}`;
-          }
-          
+        (launchString: string) => {
           this.getData(launchString);
         }
       )

@@ -14,19 +14,36 @@ export class SidebarComponent implements OnInit {
   launchingStatus = ['True', 'False'];
   data: any = [];
 
+  year;
+  launchSuccess;
+  landSuccess;
+
   constructor(private _launchData: LaunchService) { }
 
   ngOnInit() { }
 
   getFilterData(filter, value) {
-    const filterVal = {} as FilterLaunchData;
-    filterVal.filter = filter;
-    filterVal.value = value;
-    this._launchData.sendData(filterVal);
-  }
-}
+    let launchString = '';
+    if (filter === 'launchYear') {
+      this.year = value
+    }
+    if (filter === 'launchStatus') {
+      this.launchSuccess = value
+    }
+    if (filter === 'landStatus') {
+      this.landSuccess = value
+    }
 
-export interface FilterLaunchData {
-  filter: string,
-  value: string
+    if (this.year) {
+      launchString += `&launch_year=${this.year}`;
+    }
+    if (this.launchSuccess) {
+      launchString += `&launch_success=${this.launchSuccess}`;
+    }
+    if (this.landSuccess) {
+      launchString += `&land_success=${this.landSuccess}`;
+    }
+
+    this._launchData.sendData(launchString);
+  }
 }

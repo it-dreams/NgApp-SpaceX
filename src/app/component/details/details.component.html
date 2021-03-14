@@ -1,16 +1,16 @@
 <div class="mission-detail-container">
     <div class="mission-detail">
         <section class="mission-detail-card" *ngFor="let result of launchDetails; index as i;">
-            <img [src]="result.links.mission_patch" alt={{result.mission_name}}>
+            <img [src]="result.links.mission_patch_small" alt={{result.mission_name}}>
             <h3 aria-label="Mission name">
                 {{result.mission_name}} #{{i+1}}
             </h3>
             <p aria-label="Mission Ids">
                 <strong>Mission Ids:</strong>
-                <!-- {{result.mission_id || 'NA'}} -->
+                {{(result.mission_id.length === 0) ? 'NA' : ''}}
             </p>
             <ul *ngFor="let id of result.mission_id;">
-                <li>{{(id.length >= 0) ? id : 'NA' }}</li>
+                <li>{{id}}</li>
             </ul>
             <p aria-label="Launch Year">
                 <strong>Launch Year:</strong>

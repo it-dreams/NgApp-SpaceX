@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { FilterLaunchData } from '../component/sidebar/sidebar.component';
 
 @Injectable({
     providedIn: 'root',
@@ -13,7 +12,7 @@ export class LaunchService {
 
     launchData: string[] = [];
 
-    private _rocketLaunchData = new Subject<FilterLaunchData>();
+    private _rocketLaunchData = new Subject<string>();
     launchRocketData$ = this._rocketLaunchData.asObservable();
 
     constructor(private http: HttpClient) { }
@@ -22,7 +21,7 @@ export class LaunchService {
         return this.http.get(this.basUrl + (queryString || ''));
     }
 
-    sendData(data: FilterLaunchData) {
+    sendData(data: string) {
         this._rocketLaunchData.next(data);
     }
 }
