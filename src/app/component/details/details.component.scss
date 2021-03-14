@@ -1,3 +1,5 @@
+@import '../../../assets/scss/global.scss';
+
 .mission-detail-container {
     height: 100%;
     .mission-detail {
@@ -6,8 +8,10 @@
         flex-wrap: wrap;
 
         .mission-detail-card {
-            background-color: #ffffff;
-            width: 187px;
+            background-color: $white-primary;
+            // flex: 0 0 25%;
+            max-width: 25%;
+            width: 20%;
             height: auto;
             padding: 10px;
             border-radius: 7px;
@@ -17,19 +21,18 @@
 
             img {
                 width: 100%;
-                max-width: inherit;
                 min-height: 100px;  
                 max-height: 280px;
-                background-color: #eeeeee;
-                border: 1px solid#eeeeee;          
+                background-color: $white-secondry;
+                border: 1px solid $white-secondry;          
             }
             h3 {
-                color: #454a8b;
+                color: $blue-primary;
             }
             p { 
-                color: #454a8b;
+                color: $blue-primary;
                 strong {
-                    color: #333333;
+                    color: $black-secondry;
                 }
             }
         }        

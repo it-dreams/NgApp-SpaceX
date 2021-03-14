@@ -1,3 +1,4 @@
+@import '../../../assets/scss/global.scss';
 
 .launch-year, .successful-launch, .successful-landing {
     margin-bottom: 20px;
@@ -5,7 +6,7 @@
     p {
         text-transform: capitalize;
         text-align: center;
-        border-bottom: 2px solid #ccc;
+        border-bottom: 2px solid $gray-secondry;
         padding-bottom: 5px;
         margin: 0 10%;
         font-weight: 400;
@@ -18,21 +19,38 @@
         justify-content: space-between;
 
         button {
-            background: #c5e09b !important;
-            color: #000000;
+            background: $green-primary !important;
+            color: $black-primary;
             border: none;
             padding: 8px 30px;
             border-radius: 5px;
             line-height: 1;
             flex: 0 1 38%;
             margin: 5px 0;
-            cursor: pointer;    
-            border: 1px solid#333;     
+            cursor: pointer;     
 
             &:active, &:focus, &::selection, &:active {
-                background: #8acc21 !important;       
+                background: $green-secondry !important;  
+                border: 1px solid $black-secondry;        
             }   
         }
-        
+    }
+    .reset-filter {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+
+        .reset-btn {
+            background: $red-primary !important;
+            color: $white-primary;
+            padding: 8px 30px;
+            border-radius: 5px;
+            line-height: 1;
+            cursor: pointer;       
+
+            &:active, &:focus, &::selection, &:active {
+                background: $red-primary !important;       
+            } 
+        }
     }
 }

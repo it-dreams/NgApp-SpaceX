@@ -1,3 +1,5 @@
+@import '../assets/scss/global.scss';
+
 .wapper {
     width: 1440px;
     max-width: 100%;
@@ -15,7 +17,7 @@
             max-width: 21%;
             height: max-content;
             padding: 15px;
-            background-color: #ffffff;
+            background-color: $white-primary;
             border-radius: 7px;
             margin-bottom: 46px;
             position: sticky;
@@ -31,7 +33,7 @@
     footer {
         position: fixed;
         bottom: 0;
-        background-color: #f2f2f2;
+        background-color: $gray-primary;
         width: 1440px;
         margin: auto;
 
