@@ -30,7 +30,7 @@ Install the dependencies and devDependencies.
 
 `$ ng serve | $ npm start`
 
-Run app with Server side Rendering
+start with Server side Rendering
 
 `$ npm run serve:ssr`
 
@@ -39,7 +39,7 @@ Run app with Server side Rendering
 
 `$ ng build | $ npm run build`
 
-build with Server side Rendering
+build with server side Rendering
 
 `$ npm run build:ssr`
 
