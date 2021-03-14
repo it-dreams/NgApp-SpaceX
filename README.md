@@ -1,9 +1,12 @@
 # NgAppSpaceX
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
+SpaceX is launch program application. It's have data all data from 2006 to current year. This is a fully responsive web/mobile application.
+
+[Click Here](https://spacex-launching-program-2021.herokuapp.com/)
+
+
 
 ## Technologies 
-NgAppSpaceX app uses a number of open source projects to work properly:
 
 * Angular 9
 * Angular Universal (Server Side Rendering)
@@ -15,7 +18,7 @@ NgAppSpaceX app uses a number of open source projects to work properly:
 ## Important commands
 
 ### Installation
-Clone down this repository. You will need node and npm installed globally on your machine.
+First of all, Clone this repo then you will need node and npm installed globally on your machine.
 
 Install the dependencies and devDependencies.
 
@@ -23,37 +26,23 @@ Install the dependencies and devDependencies.
 
 ### Start application
 
-`ng serve | npm start`
+`$ ng serve | $ npm start`
 
 Run app with Server side Rendering
 
-`npm run serve:ssr`
+`$ npm run serve:ssr`
 
 
 ### Build Application
 
-`ng build | npm run build`
+`$ ng build | $ npm run build`
 
 build with Server side Rendering
 
-`npm run build:ssr`
+`$ npm run build:ssr`
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
