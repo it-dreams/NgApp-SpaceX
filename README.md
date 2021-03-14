@@ -4,7 +4,7 @@ SpaceX is launch program application. It's have data all data from 2006 to curre
 
 [Click Here](https://spacex-launching-program-2021.herokuapp.com/)
 
-
+![alt text](https://github.com/it-dreams/NgApp-SpaceX/blob/master/src/assets/spacex-launching-program.PNG)
 
 ## Technologies 
 
@@ -22,7 +22,7 @@ First of all, Clone this repo then you will need node and npm installed globally
 
 Install the dependencies and devDependencies.
 
-`npm install`
+`$ npm install`
 
 ### Start application
 
