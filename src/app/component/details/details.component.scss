@@ -30,7 +30,7 @@
             h3 {
                 color: $blue-primary;
             }
-            p { 
+            p, ul>li { 
                 color: $blue-primary;
                 strong {
                     color: $black-secondry;
@@ -55,7 +55,7 @@
             top: 50%;
             left: 50%;
             font-size: 30px;
-            color: #fff;
+            color: $white-primary;
             transform: translate(-40%,-40%);
             -ms-transform: translate(-50%,-50%);
         }
@@ -65,7 +65,7 @@
             position: relative;
             top: 30%;
             left: 5%;
-            color: #ffffff;
+            color: $white-primary;
             font-size: 20px;
             margin: 100px auto;
             width: 1em;
