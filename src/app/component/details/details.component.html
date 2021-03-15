@@ -26,7 +26,8 @@
             </p>
         </section>
     </div>
-    <div class="no-record-found" *ngIf="launchDetails.length === 0">
-        <h2>No Record found!</h2>
+    <p class="no-record-found" *ngIf="!isLoading && launchDetails && !launchDetails.length">No Record found!</p>
+    <div *ngIf="isLoading" id="loading">
+        <p class="loading-text">Loading....</p>
     </div>
 </div>

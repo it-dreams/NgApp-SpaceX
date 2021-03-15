@@ -13,8 +13,7 @@ export class DetailsComponent implements OnInit {
   year;
   launchSuccess;
   landSuccess;
-  public loading = false;
-
+  isLoading = false;
   constructor(private _launchData: LaunchService) { }
 
   ngOnInit() {
@@ -23,19 +22,23 @@ export class DetailsComponent implements OnInit {
   }
 
   getData(queryString?: string) {
-    this.loading = true;
+    this.isLoading = true;
     this._launchData.fetchLaunchData(queryString)
       .subscribe(
         data => {
+          this.isLoading = false;
           this.launchDetails = data
-          this.loading = false;
         },
-        err => console.error(err),
-        () => console.log('done loading Data')
+        err => {
+          console.error(err)
+          this.isLoading = false;
+        },
+        () => console.log('Loading Data ...')
       );
   }
 
   getFilterData() {
+    this.isLoading = true;
     this._launchData.launchRocketData$
       .subscribe(
         (launchString: string) => {
