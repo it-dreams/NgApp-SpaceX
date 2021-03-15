@@ -21,7 +21,8 @@
 
             img {
                 width: 100%;
-                min-height: 100px;  
+                min-width: 100%;
+                min-height: 189px; 
                 max-height: 280px;
                 background-color: $white-secondry;
                 border: 1px solid $white-secondry;          
