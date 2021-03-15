@@ -28,7 +28,8 @@
             flex: 0 1 38%;
             margin: 5px 0;
             cursor: pointer; 
-            border: 1px solid transparent;     
+            border: 1px solid transparent; 
+            text-transform: capitalize;    
         }
         .active-btn {
             background: $green-secondry !important;  
