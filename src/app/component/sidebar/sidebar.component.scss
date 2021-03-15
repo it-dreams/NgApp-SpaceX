@@ -27,30 +27,13 @@
             line-height: 1;
             flex: 0 1 38%;
             margin: 5px 0;
-            cursor: pointer;     
-
-            &:active, &:focus, &::selection, &:active {
-                background: $green-secondry !important;  
-                border: 1px solid $black-secondry;        
-            }   
+            cursor: pointer; 
+            border: 1px solid transparent;     
+        }
+        .active-btn {
+            background: $green-secondry !important;  
+            border: 1px solid $black-secondry;                   
         }
     }
-    .reset-filter {
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
 
-        .reset-btn {
-            background: $red-primary !important;
-            color: $white-primary;
-            padding: 8px 30px;
-            border-radius: 5px;
-            line-height: 1;
-            cursor: pointer;       
-
-            &:active, &:focus, &::selection, &:active {
-                background: $red-primary !important;       
-            } 
-        }
-    }
 }

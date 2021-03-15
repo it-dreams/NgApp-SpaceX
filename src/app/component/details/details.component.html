@@ -18,15 +18,17 @@
             </p>
             <p aria-label="Successful Launch">
                 <strong>Successful Launch:</strong>
-                {{result.launch_success || 'NA'}}
+                {{result.launch_success ? 'True' : 'False'}}
             </p>
             <p aria-label="Successful Landing">
                 <strong>Successful Landing:</strong>
-                {{result.rocket.first_stage.cores[0].land_success || 'NA'}}
+                {{result.rocket.first_stage.cores[0].land_success ? 'True' : 'False'}}
             </p>
         </section>
     </div>
+    <!-- data not found -->
     <p class="no-record-found" *ngIf="!isLoading && launchDetails && !launchDetails.length">No Record found!</p>
+    <!-- loader -->
     <div *ngIf="isLoading" id="loading">
         <p class="loading-text">Loading....</p>
     </div>

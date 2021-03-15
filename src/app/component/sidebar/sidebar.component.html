@@ -1,42 +1,30 @@
 <h2>{{title}}</h2>
 <div class="launch-year">
     <p aria-label="Launch Year">Launch Year</p>
-    <div class="reset-filter">
-        <button mat-flat-button class="reset-btn" *ngIf="year"
-        (click)="getFilterData('launchYear', null)"> Reset Filter </button>
-    </div>
     <div class="years">
-        <button mat-flat-button (click)="getFilterData('launchYear', year)"
-            *ngFor="let year of launchingYears">
-            {{year}}
+        <button mat-flat-button (click)="getFilterData('launchYear', (year === item) ? null : item)"
+            *ngFor="let item of launchingYears" [ngClass]="year === item ? 'active-btn' : ''">
+            {{item}}
         </button>
     </div>
 </div>
 
 <div class="successful-launch">
     <p aria-label="Successful Launch">Successful Launch</p>
-    <div class="reset-filter">
-        <button mat-flat-button class="reset-btn" *ngIf="launchSuccess" 
-        (click)="getFilterData('launchStatus', null)"> Reset Filter </button>
-    </div>
     <div class="years">
-        <button mat-flat-button (click)="getFilterData('launchStatus', status)"
-            *ngFor="let status of launchingStatus">
-            {{status}}
+        <button mat-flat-button (click)="getFilterData('launchStatus', (launchSuccess === item) ? null : item)"
+            *ngFor="let item of launchingStatus" [ngClass]="launchSuccess === item ? 'active-btn' : ''">
+            {{item}}
         </button>
     </div>
 </div>
 
 <div class="successful-landing">
     <p aria-label="successful-landing">Successful Landing</p>
-    <div class="reset-filter">
-        <button mat-flat-button class="reset-btn" *ngIf="landSuccess"
-        (click)="getFilterData('landStatus', null)"> Reset Filter </button>
-    </div>
     <div class="years">
-        <button mat-flat-button (click)="getFilterData('landStatus', status)"
-            *ngFor="let status of launchingStatus">
-            {{status}}
+        <button mat-flat-button (click)="getFilterData('landStatus', (landSuccess === item) ? null : item)"
+            *ngFor="let item of landingStatus" [ngClass]="landSuccess === item ? 'active-btn' : ''">
+            {{item}}
         </button>
     </div>
 </div>
